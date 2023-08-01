@@ -1,0 +1,45 @@
+.sgsb-fly-cart-table td.product-name .sgsb-product-title a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #080814;
+    padding-bottom: 5px;
+    font-weight: 700;
+}
+.sgsb-fly-cart-table td.product-name .sgsb-product-title .sgsb-product-category {
+    font-size: 16px;
+    font-weight: initial;
+  }
+
+  category code
+
+  $product_categories = get_the_terms( $product_id, 'product_cat' );
+							// var_dump( print_r( $product_categories ) );
+							// Check if categories exist and loop through them.
+							if ( $product_categories && ! is_wp_error( $product_categories ) ) {
+								foreach ( $product_categories as $product_category ) {
+									// Display the category name.
+									echo '<div class="sgsb-product-category">' . esc_html( $product_category->name ) . '</div>';
+								}
+							}
+
+
+//fly cart
+heading
+	<div class="qc-cart-heading">
+		<h3 class="wfc-cart-heading">
+			<?php esc_html_e( 'Shopping Cart', 'storegrowth-sales-booster' ); ?>
+			<span class="wfc-close-btn sgsb-cart-widget-close" title="Close">×</span>
+		</h3>
+	</div>
+
+
+  wfc-style
+
+  .qc-cart-heading{
+    position:sticky;
+}
+
+.sgsb-widget-shopping-cart-content-wrapper {
+    height:90%;
+    overflow-y: scroll;
+}
