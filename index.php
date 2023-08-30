@@ -59,6 +59,8 @@ foreach ( $mobileKeywords as $keyword ) {
 	}
 }
 
+//testing  o f tshs 
+
 if ( ! $isMobileDevice ) {
 	// It's not a mobile device
 	echo 'This is not a mobile device.';
